@@ -8,6 +8,7 @@ function App() {
   return (
     <div className="App">
       {isLoggedIn===false && <LoginSignup/>}
+      {isLoggedIn===true && <h1>HOME LOGGed in</h1>}
     </div>
   );
 }

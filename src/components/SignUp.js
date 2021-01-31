@@ -1,17 +1,29 @@
 import React,{useState} from 'react';
 import { addUser } from "../redux/actions";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 function SignUp({setType}) {
     const dispatch = useDispatch();
+    const users = useSelector(state => state.ui.users);
     const [value, setValue] = useState({
         name : "",
         email:"",
         password:""
     });
     const handleSubmit = ()=>{
-        dispatch(addUser(value));
-        console.log(value);
+        if(value.name==="" || value.email==="" || value.password===""){
+            return;
+        }
+        //checking for duplicate user email.
+        var index =users.findIndex(user=>user.email===value.email);
+        if(index===-1){
+            dispatch(addUser(value));
+            console.log(value);
+        }
+        else{
+            console.log("duplicate");
+            return;
+        }
     };
     return (
         <div className="signup-container">
