@@ -1,6 +1,6 @@
 const initialState = {
     cart : [],
-    orders : [],
+    order : []
 };
 
 const reducer = (state = initialState , action)=>{
@@ -51,6 +51,13 @@ const reducer = (state = initialState , action)=>{
             return{
                 ...state,
                 cart : newCart
+            };
+        case"CHECK_OUT":
+            var orders = state.cart;
+            return{
+                ...state,
+                cart : [],
+                order : orders
             };
         default:
             return state;

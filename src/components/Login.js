@@ -1,6 +1,7 @@
 import React,{useState} from 'react';
 import { useDispatch, useSelector } from "react-redux";
 import { loginUser } from "../redux/actions";
+import { showNotification } from "../config/noty";
 
 function Login({setType}) {
     const dispatch = useDispatch();
@@ -11,16 +12,21 @@ function Login({setType}) {
     });
     const handleSubmit =()=>{
         if(value.email==="" || value.password===""){
+            showNotification("Please fill the values!");
             return;
         }
         var index =users.findIndex(user=>user.email===value.email);
         if(index===-1){
+            showNotification("Invalid User!");
             return;
         }
         else{
             if(users[index].password===value.password){
-                console.log("logged");
                 dispatch(loginUser(users[index]));
+            }
+            else{
+                showNotification("Invalid Email or Password!");
+                return;
             }
             
         }

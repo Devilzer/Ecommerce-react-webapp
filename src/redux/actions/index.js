@@ -1,3 +1,3 @@
-export {addUser, loginUser, updateSearch, setFilter , setPage} from "./uiActions";
+export {addUser, loginUser, updateSearch, setFilter , setPage, userLogOut} from "./uiActions";
 export {fetchProducts} from "./productActions";
-export {addProductCart , decreseQuantity, deleteCartProduct} from "./cartAction";
+export {addProductCart , decreseQuantity, deleteCartProduct, checkOut} from "./cartAction";

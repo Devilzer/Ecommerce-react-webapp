@@ -1,6 +1,7 @@
 import React,{useState} from 'react';
 import { addUser } from "../redux/actions";
 import { useDispatch, useSelector } from "react-redux";
+import { showNotification } from "../config/noty";
 
 function SignUp({setType}) {
     const dispatch = useDispatch();
@@ -12,6 +13,7 @@ function SignUp({setType}) {
     });
     const handleSubmit = ()=>{
         if(value.name==="" || value.email==="" || value.password===""){
+            showNotification("Please fill the values!");
             return;
         }
         //checking for duplicate user email.
@@ -21,7 +23,7 @@ function SignUp({setType}) {
             setValue({...value,name:"",password:"",email:""});
         }
         else{
-            console.log("duplicate");
+            showNotification("Email already registered !");
             return;
         }
     };

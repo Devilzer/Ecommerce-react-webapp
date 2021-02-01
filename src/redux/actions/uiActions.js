@@ -1,4 +1,8 @@
+import { showNotification } from "../../config/noty";
+
 export const addUser = (user)=>{
+
+    showNotification("Registered Successfully.");
     return{
         type : "ADD_USER",
         payload : user
@@ -6,6 +10,7 @@ export const addUser = (user)=>{
 };
 
 export const loginUser = (user)=>{
+    showNotification("Login Success.");
     return{
         type:"LOGIN_USER",
         payload:user
@@ -30,5 +35,12 @@ export const setPage = (value)=>{
     return{
         type:"SET_PAGE",
         payload : value
+    };
+};
+
+export const userLogOut = ()=>{
+    showNotification("Logout Success.");
+    return{
+        type :"LOGOUT_USER"
     };
 };

@@ -1,9 +1,10 @@
 import React,{useEffect} from 'react';
 import { useSelector, useDispatch } from "react-redux";
 import Button from '@material-ui/core/Button';
-import { fetchProducts, updateSearch, setFilter , setPage} from "../redux/actions";
+import { fetchProducts, updateSearch, setFilter , setPage ,userLogOut} from "../redux/actions";
 import Products from "./Products";
 import Cart from "./Cart";
+import ThankYouPage from "./ThankYouPage";
 
 function Home() {
     const dispatch = useDispatch();
@@ -34,14 +35,15 @@ function Home() {
                 
                 <div className ="head-buttons">
                     <div className="cart" onClick={()=>dispatch(setPage("cart"))}>
-                        <span>0</span><i className="fab fa-opencart"></i>
+                        <span>{state.cart.cart.length}</span><i className="fab fa-opencart"></i>
                     </div>
-                    <Button>Log Out&nbsp;<i className="fas fa-sign-out-alt"></i></Button>
+                    <Button onClick={()=>dispatch(userLogOut())}>Log Out&nbsp;<i className="fas fa-sign-out-alt"></i></Button>
                 </div>
             </div>
             {state.ui.page==="home"&&ele}
             {state.ui.page==="home"&&<Products/>}
             {state.ui.page==="cart"&&<Cart/>}
+            {state.ui.page==="thankyou"&&<ThankYouPage/>}
         </div>
     )
 }
