@@ -41,6 +41,34 @@
         "title": "Apple Watch",
         "price": 32990,
         "rating": 5
+      },
+      {
+        "img": "https://images-na.ssl-images-amazon.com/images/I/61g7EWzQ2DL._SL1500_.jpg",
+        "id": 7,
+        "title": "OnePlus Buds",
+        "price": 4990,
+        "rating": 4
+      },
+      {
+        "img": "https://images-na.ssl-images-amazon.com/images/I/71zny7BTRlL._SL1500_.jpg",
+        "id": 8,
+        "title": "AirPods Pro",
+        "price": 4990,
+        "rating": 5
+      },
+      {
+        "img": "https://images-na.ssl-images-amazon.com/images/I/611qu2aEn1L._SL1384_.jpg",
+        "id": 9,  
+        "title": "Bose Earbuds",
+        "price": 26990,
+        "rating": 3
+      },
+      {
+        "img": "https://images-na.ssl-images-amazon.com/images/I/61d5F64UDpL._SL1200_.jpg",
+        "id": 10,  
+        "title": "JBL Flip 4",
+        "price": 6990,
+        "rating": 4
       }
     ]
   }
