@@ -1,0 +1,46 @@
+{
+    "products": [
+      {
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNxz7ME3co2srxMGV96yNiEzwYRzqSyJfKjg&usqp=CAU",
+        "id": 1,
+        "title": "Apple iPhone 12",
+        "price": 73990,
+        "rating": 4
+      },
+      {
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQs0BWcm-pGRzQS5WHjWjCaYMlUPSHLsvdlzA&usqp=CAU",
+        "id": 2,
+        "title": "MacBook Air",
+        "price": 92990,
+        "rating": 4.5
+      },
+      {
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyXm_1eIhGoRMUa9YnxRRp53c00cN3OkbK2A&usqp=CAU",
+        "id": 3,
+        "title": "Samsung Note20",
+        "price": 104999,
+        "rating": 5
+      },
+      {
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJfHTjCSTk1n3uBVwvdE00BqEdfpQtN7_mnQ&usqp=CAU",
+        "id": 4,
+        "title": "Apple iPad Air",
+        "price": 40999,
+        "rating": 4
+      },
+      {
+        "img": "https://images-na.ssl-images-amazon.com/images/I/A1A2yQlAXCL._SL1500_.jpg",
+        "id": 5,
+        "title": "ASUS Laptop",
+        "price": 96990,
+        "rating": 4
+      },
+      {
+        "img": "https://images-na.ssl-images-amazon.com/images/I/71rhrO49SmL._SL1500_.jpg",
+        "id": 6,
+        "title": "Apple Watch",
+        "price": 32990,
+        "rating": 5
+      }
+    ]
+  }
