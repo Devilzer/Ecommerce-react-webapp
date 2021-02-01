@@ -1,8 +1,9 @@
 import React,{useEffect} from 'react';
 import { useSelector, useDispatch } from "react-redux";
 import Button from '@material-ui/core/Button';
-import { fetchProducts, updateSearch, setFilter } from "../redux/actions";
+import { fetchProducts, updateSearch, setFilter , setPage} from "../redux/actions";
 import Products from "./Products";
+import Cart from "./Cart";
 
 function Home() {
     const dispatch = useDispatch();
@@ -26,13 +27,13 @@ function Home() {
     return (
         <div className="home-container">
             <div className= "header"> 
-                <div className="heading" >
+                <div className="heading" onClick={()=>dispatch(setPage("home"))}>
                     Ecommerce Store
                 </div>
                 {state.ui.page==="home"&&<input type="text" placeholder="Search Products...." value={state.ui.search} onChange={(e)=>dispatch(updateSearch(e.target.value))}/>}
                 
                 <div className ="head-buttons">
-                    <div className="cart" >
+                    <div className="cart" onClick={()=>dispatch(setPage("cart"))}>
                         <span>0</span><i className="fab fa-opencart"></i>
                     </div>
                     <Button>Log Out&nbsp;<i className="fas fa-sign-out-alt"></i></Button>
@@ -40,6 +41,7 @@ function Home() {
             </div>
             {state.ui.page==="home"&&ele}
             {state.ui.page==="home"&&<Products/>}
+            {state.ui.page==="cart"&&<Cart/>}
         </div>
     )
 }

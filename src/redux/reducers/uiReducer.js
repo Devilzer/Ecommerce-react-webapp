@@ -30,6 +30,11 @@ const reducer = (state = initialState , action)=>{
                 ...state,
                 filter : action.payload
             };
+        case "SET_PAGE":
+            return{
+                ...state,
+                page : action.payload
+            };
         default:
             return state;
     }

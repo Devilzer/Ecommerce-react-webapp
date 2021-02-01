@@ -25,3 +25,10 @@ export const setFilter = (value)=>{
         payload :  value
     };
 };
+
+export const setPage = (value)=>{
+    return{
+        type:"SET_PAGE",
+        payload : value
+    };
+};
