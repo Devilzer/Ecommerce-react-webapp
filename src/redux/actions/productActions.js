@@ -3,7 +3,7 @@ import axios from "axios";
 
 export const fetchProducts = ()=>async(dispatch)=>{
     try {
-        const {data} = await axios.get("https://my-json-server.typicode.com/Devilzer/ecommerce-react/products");
+        const {data} = await axios.get("https://my-json-server.typicode.com/Devilzer/Ecommerce-react-webapp/products");
         console.log(data);
         
         dispatch({
@@ -13,25 +13,4 @@ export const fetchProducts = ()=>async(dispatch)=>{
     } catch (error) {
         console.log(error);
     }
-};
-export const addProduct = (value) =>{
-    // showNotification("Product Added.");
-    return{
-        type : "ADD_PRODUCT",
-        payload : value
-    };
-};
-export const editProduct = (value)=>{
-    // showNotification("Product Updated.");
-    return{
-        type : "EDIT_PRODUCT",
-        payload : value
-    };
-};
-export const deleteProduct = (id)=>{
-    // showNotification("Product Deleted.");
-    return{
-        type : "DELETE_PRODUCT",
-        payload : id
-    };
 };

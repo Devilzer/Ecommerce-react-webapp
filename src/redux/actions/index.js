@@ -1,1 +1,2 @@
-export {addUser, loginUser} from "./uiActions";
+export {addUser, loginUser, updateSearch, setFilter} from "./uiActions";
+export {fetchProducts} from "./productActions";

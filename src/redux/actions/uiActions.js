@@ -11,3 +11,17 @@ export const loginUser = (user)=>{
         payload:user
     };
 };
+
+export const updateSearch = (value)=>{
+    return{
+        type:"UPDATE_SEARCH",
+        payload : value
+    };
+};
+
+export const setFilter = (value)=>{
+    return{
+        type : "SET_FILTER",
+        payload :  value
+    };
+};
