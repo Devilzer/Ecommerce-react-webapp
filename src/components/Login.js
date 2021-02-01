@@ -1,6 +1,6 @@
 import React,{useState} from 'react';
 import { useDispatch, useSelector } from "react-redux";
-
+import { loginUser } from "../redux/actions";
 
 function Login({setType}) {
     const dispatch = useDispatch();
@@ -20,6 +20,7 @@ function Login({setType}) {
         else{
             if(users[index].password===value.password){
                 console.log("logged");
+                dispatch(loginUser(users[index]));
             }
             
         }

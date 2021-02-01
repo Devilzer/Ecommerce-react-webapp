@@ -18,7 +18,7 @@ function SignUp({setType}) {
         var index =users.findIndex(user=>user.email===value.email);
         if(index===-1){
             dispatch(addUser(value));
-            console.log(value);
+            setValue({...value,name:"",password:"",email:""});
         }
         else{
             console.log("duplicate");

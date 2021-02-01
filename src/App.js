@@ -1,6 +1,7 @@
 import './style/App.scss';
 import { useSelector } from "react-redux";
 import LoginSignup from "./components/LoginSignup";
+import Home from "./components/Home";
 
 function App() {
   const isLoggedIn = useSelector(state => state.ui.isLoggedIn);
@@ -8,7 +9,7 @@ function App() {
   return (
     <div className="App">
       {isLoggedIn===false && <LoginSignup/>}
-      {isLoggedIn===true && <h1>HOME LOGGed in</h1>}
+      {isLoggedIn===true && <Home/>}
     </div>
   );
 }

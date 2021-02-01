@@ -1,1 +1,1 @@
-export {addUser} from "./uiActions";
+export {addUser, loginUser} from "./uiActions";
